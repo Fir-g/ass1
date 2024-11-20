@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String  @id @default(uuid()) @map("_id")
+  email    String  @unique
+  password String
+  fullName String?
+  loans    Loan[]
+  role     Role
+}
+
+model Loan {
+  id                String   @id @default(uuid()) @map("_id")
+  fullName          String?
+  amount            Int
+  tenure            String
+  reason            String
+  user              User     @relation(fields: [userId], references: [id])
+  userId            String
+  status            Status
+  approver          String?
+  employmentStatus  Boolean
+  employmentAddress String
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  paid              Boolean  @default(false)
+}
+
+enum Status {
+  APPROVED
+  PENDING
+  VERIFIED
+  REJECTED
+}
+
+enum Role {
+  ADMIN
+  VERIFIER
+  USER
+}
