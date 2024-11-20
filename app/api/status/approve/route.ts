@@ -2,29 +2,55 @@ import prisma from "@/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req: NextRequest) {
-  const url = req.nextUrl;
-  const searchParams = new URLSearchParams(url.search);
-  const role = searchParams.get("role") || "User";
-  const id = searchParams.get("id") ?? "";
+  try {
+    const url = req.nextUrl;
+    const searchParams = new URLSearchParams(url.search);
+    const role = searchParams.get("role") || "User";
+    const id = searchParams.get("id");
 
-  if (role == "ADMIN") {
+    // Validate input
+    if (!id) {
+      return NextResponse.json(
+        { error: "Loan ID is required" },
+        { status: 400 }
+      );
+    }
+
+    // Strict role comparison (adjust based on your actual role storage)
+    if (role !== "ADMIN") {
+      return NextResponse.json({ error: "Not Authorized" }, { status: 403 });
+    }
+
+    // Perform the update
     const updatedLoan = await prisma.loan.update({
-      where: {
-        id: id,
-      },
-
-      data: {
-        status: "APPROVED",
-      },
+      where: { id },
+      data: { status: "APPROVED" },
     });
 
-    return NextResponse.json({
-      message: "Loan status is APPROVED",
-    });
-  } else {
-    return NextResponse.json({
-      error: "Not Verified",
-      status: 429,
-    });
+    return NextResponse.json(
+      {
+        message: "Loan status is APPROVED",
+        loan: updatedLoan,
+      },
+      { status: 200 }
+    );
+  } catch (error) {
+    console.error("Loan approval error:", error);
+
+    // Handle potential Prisma errors
+    if (error instanceof Error) {
+      return NextResponse.json(
+        {
+          error: "Failed to update loan",
+          details: error.message,
+        },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json(
+      { error: "An unexpected error occurred" },
+      { status: 500 }
+    );
   }
 }
