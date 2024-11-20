@@ -1,7 +1,4 @@
-"use client";
-
 import { useSession } from "next-auth/react";
-
 import {
   AreaChart,
   FilePen,
@@ -108,13 +105,13 @@ const SideNavbar = () => {
   const [user, setUser] = useState<{ name: string }>();
 
   useEffect(() => {
-    const fecthUser = async () => {
+    const fetchUser = async () => {
       const user = (await axios.get(`api/user/data`)).data;
       setUser(user);
       console.log(user);
     };
 
-    fecthUser();
+    fetchUser();
   }, []);
 
   return (
@@ -126,10 +123,10 @@ const SideNavbar = () => {
       <nav className="flex flex-col items-center text-white mb-10 w-48">
         {links.map((link, index) => (
           <Link
+            key={index} // Added key prop
             href={link.href}
-            className={`flex hover:bg-[#0A512F] hover:text-white  items-center transition-colors hover:text-foreground h-full p-3 md:w-full gap-2 border-b-2 border-black/20 ${
-              link.isActive ? "bg-[#0A512F]" : ""
-            }`}
+            className={`flex hover:bg-[#0A512F] hover:text-white items-center transition-colors hover:text-foreground h-full p-3 md:w-full gap-2 border-b-2 border-black/20 ${link.isActive ? "bg-[#0A512F]" : ""
+              }`}
           >
             <link.icon className="h-5 w-5" />
             <span>{link.title}</span>
