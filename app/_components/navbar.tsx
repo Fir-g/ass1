@@ -123,11 +123,11 @@ export const Navbar = async () => {
   });
 
   const navLinks = [
-    { href: "#", label: "Dashboard" },
-    { href: "#", label: "Orders" },
-    { href: "#", label: "Products" },
-    { href: "#", label: "Customers" },
-    { href: "#", label: "Settings" },
+    { href: "#", label: "Dashboard", index: "1" },
+    { href: "#", label: "Orders", index: "2" },
+    { href: "#", label: "Products" , index: "3"},
+    { href: "#", label: "Customers" , index: "4"},
+    { href: "#", label: "Settings" , index: "5"},
   ];
 
   return (
