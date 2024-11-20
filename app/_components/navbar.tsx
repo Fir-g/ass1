@@ -157,13 +157,13 @@ export const Navbar = async () => {
                 CREDIT APP
               </h2>
             </Link>
-            {navLinks.map((link, index) => (
+            {navLinks.map(({ href, label }, index) => (
               <Link
-                key={index} // Ensure each Link gets a unique key
-                href={link.href}
+                key={`nav-link-${index}`} // Ensure unique keys for every item
+                href={href}
                 className="text-muted-foreground hover:text-foreground"
               >
-                {link.label}
+                {label}
               </Link>
             ))}
           </nav>
@@ -171,14 +171,14 @@ export const Navbar = async () => {
       </Sheet>
       <div className="flex w-full items-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
         <div className="ml-auto flex-1 sm:flex-initial flex gap-2">
-          <div className="p-2">
+          <div className="p-2" key="bell-icon">
             <Bell className="h-5 w-5 fill-[#0A512F]" />
           </div>
-          <div className="p-1">
+          <div className="p-1" key="message-icon">
             <MessageCircleMore className="h-6 w-6 fill-[#0A512F] text-white" />
           </div>
         </div>
-        <div className="flex items-center justify-center mb-1">
+        <div className="flex items-center justify-center mb-1" key="user-role">
           <CircleUser className="h-5 w-5" />
           <span className="text-lg ml-2 font-bold text-green-700">
             {userRole?.role}
