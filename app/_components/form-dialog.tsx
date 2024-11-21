@@ -91,7 +91,7 @@ const FormDialog = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="bg-[#6B9908] shadow-lg hover:bg-[#6b9908cf]">
+        <Button className="bg-[#507687] shadow-lg hover:bg-[#507687]">
           Get a Loan
         </Button>
       </DialogTrigger>
@@ -221,7 +221,7 @@ const FormDialog = () => {
             </div>
           </div>
           <DialogFooter>
-            <Button className="bg-[#0A5210] hover:[#0A512F]" type="submit">
+            <Button className="bg-[#507687] hover:[#507687]" type="submit">
               Submit
             </Button>
           </DialogFooter>

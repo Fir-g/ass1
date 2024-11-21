@@ -12,7 +12,7 @@ const DataCard = ({
 }) => {
   return (
     <div className="w-[270px] h-24 flex items-center border shadow-md">
-      <div className="w-[30%] h-full flex items-center justify-center text-white bg-[#0A512F]">
+      <div className="w-[30%] h-full flex items-center justify-center text-white bg-[#384B70]">
         <Image src={image} alt={image} width={50} height={30} className="size-10" />
       </div>
       <div className="w-[70%] p-4">

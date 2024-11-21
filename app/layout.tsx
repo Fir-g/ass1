@@ -8,8 +8,8 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Sauvant AI | Credit APP",
-  description: "Sauvant AI | Credit APP, Loan management system",
+  title: "CreaditSea | Credit APP",
+  description: "CreaditSea | Credit APP, Loan management system",
 };
 
 export default function RootLayout({

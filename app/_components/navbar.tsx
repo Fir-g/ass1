@@ -137,7 +137,7 @@ export const Navbar = async () => {
           href="#"
           className="flex items-center gap-2 text-lg font-semibold md:text-base"
         >
-          <h2 className="text-green-700 text-nowrap font-bold">CREDIT APP</h2>
+          <h2 className="text-black-700 text-nowrap font-bold">CREDIT APP</h2>
         </Link>
       </nav>
       <Sheet>
@@ -153,7 +153,7 @@ export const Navbar = async () => {
               href="#"
               className="flex items-center gap-2 text-lg font-semibold"
             >
-              <h2 className="text-green-700 text-nowrap font-bold">
+              <h2 className="text-black-700 text-nowrap font-bold">
                 CREDIT APP
               </h2>
             </Link>
@@ -172,15 +172,15 @@ export const Navbar = async () => {
       <div className="flex w-full items-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
         <div className="ml-auto flex-1 sm:flex-initial flex gap-2">
           <div className="p-2" key="bell-icon">
-            <Bell className="h-5 w-5 fill-[#0A512F]" />
+            <Bell className="h-5 w-5 fill-[#384B70]" />
           </div>
           <div className="p-1" key="message-icon">
-            <MessageCircleMore className="h-6 w-6 fill-[#0A512F] text-white" />
+            <MessageCircleMore className="h-6 w-6 fill-[#384B70] text-white" />
           </div>
         </div>
         <div className="flex items-center justify-center mb-1" key="user-role">
           <CircleUser className="h-5 w-5" />
-          <span className="text-lg ml-2 font-bold text-green-700">
+          <span className="text-lg ml-2 font-bold text-gray-700">
             {userRole?.role}
           </span>
         </div>

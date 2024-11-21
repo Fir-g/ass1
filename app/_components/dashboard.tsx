@@ -96,20 +96,20 @@ export const Dashboard = () => {
     <div className="max-w-[1200px] mx-auto">
       <div className="my-10 flex items-center justify-between">
         <div className="flex items-center gap-4 h-full">
-          <div className="bg-[#6B9908] p-3 flex items-center justify-center">
+          <div className="bg-[#507687] p-3 flex items-center justify-center">
             <Image src={'/money.svg'} width={80} height={50} alt="note" />
           </div>
           <div className="flex flex-col gap-3">
-            <h1 className="text-[#6B9908] font-semibold text-lg">DEFICIT</h1>
+            <h1 className="text-[#507687] font-semibold text-lg">DEFICIT</h1>
             <div className="flex gap-1">
-              <span className="text-sm font-semibold text-[#6B9908]">$</span>
-              <p className="font-extrabold text-4xl text-[#6B9908]">0.0</p>
+              <span className="text-sm font-semibold text-[#507687]">$</span>
+              <p className="font-extrabold text-4xl text-[#507687]">0.0</p>
             </div>
           </div>
         </div>
         <Dialog>
           <DialogTrigger asChild>
-            <Button className="bg-[#0A512F]/20 text-black shadow-lg hover:bg-[#0A512F]/35">
+            <Button className="bg-[#384B70]/20 text-black shadow-lg hover:bg-[#384B70]/35">
               Get a Loan
             </Button>
           </DialogTrigger>

@@ -13,9 +13,9 @@ const UserName = async () => {
 //     },
 //   });
   return (
-    <div className="flex items-center gap-2 px-2 text-[#ADCF1A] border-b-2 my-4 pb-4 shadow-lg">
+    <div className="flex items-center gap-2 px-2 text-[#d7d8d1] border-b-2 my-4 pb-4 shadow-lg">
       <UserCircle />
-      Ganesh
+      Firoj
     </div>
   );
 };

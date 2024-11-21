@@ -52,7 +52,7 @@ const SideNavbar = () => {
         isActive: pathname === "/page-not-found",
       },
       {
-        title: "Loan Params",
+        title: "Loan Parameters",
         href: "/page-not-found",
         icon: Scale,
         isActive: pathname === "/page-not-found",
@@ -88,7 +88,7 @@ const SideNavbar = () => {
         isActive: pathname === "/page-not-found",
       },
       {
-        title: "Signature",
+        title: "E-Signature",
         href: "/page-not-found",
         icon: FilePen,
         isActive: pathname === "/page-not-found",
@@ -99,6 +99,14 @@ const SideNavbar = () => {
         icon: Settings,
         isActive: pathname === "/page-not-found",
       },
+      {
+        title: "Sign Out",
+        href: "/api/auth/signin", // Redirects to the sign-in endpoint
+        icon: FilePen, // You can replace FilePen with any relevant icon, e.g., LogOut
+        isActive: false, // No active state needed for Sign Out
+      },
+
+      
     ],
     [pathname]
   );
@@ -116,8 +124,8 @@ const SideNavbar = () => {
   }, []);
 
   return (
-    <aside className="fixed inset-y-0 left-0 z-10 hidden flex-col border-r bg-[#132E1A] sm:flex mt-[7vh]">
-      <div className="flex items-center gap-2 px-2 text-[#ADCF1A] border-b-2 border-zinc-700 my-4 pb-4 shadow-lg">
+    <aside className="fixed inset-y-0 left-0 z-10 hidden flex-col border-r bg-[#507687] sm:flex mt-[7vh]">
+      <div className="flex items-center gap-2 px-2 text-[#FFF7D1] border-b-2 border-zinc-700 my-4 pb-4 shadow-lg">
         <UserCircle />
         <p>{user?.name}</p>
       </div>
@@ -126,7 +134,7 @@ const SideNavbar = () => {
           <Link
             key={link.title} // Added key prop
             href={link.href}
-            className={`flex hover:bg-[#0A512F] hover:text-white items-center transition-colors hover:text-foreground h-full p-3 md:w-full gap-2 border-b-2 border-black/20 ${link.isActive ? "bg-[#0A512F]" : ""
+            className={`flex hover:bg-[#384B70] hover:text-white items-center transition-colors hover:text-foreground h-full p-3 md:w-full gap-2 border-b-2 border-black/20 ${link.isActive ? "bg-[#384B70]" : ""
               }`}
           >
             <link.icon className="h-5 w-5" />

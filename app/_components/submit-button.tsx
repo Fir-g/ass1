@@ -7,7 +7,7 @@ const SubmitButton = () => {
   return (
     <Button
       disabled={pending}
-      className="bg-[#0A5210] hover:[#0A512F]"
+      className="bg-[#507687] hover:[#384B70]"
       type="submit"
     >
       {pending ? <Loader2 className="animate-spin" /> : "Submit"}

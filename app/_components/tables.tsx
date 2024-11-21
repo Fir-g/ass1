@@ -69,7 +69,7 @@ export function Tables<TData, TValue>({
   });
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 ">
       <div className="rounded-md border">
         <Table>
           <TableHeader>
@@ -88,14 +88,15 @@ export function Tables<TData, TValue>({
                   );
                 })}
               </TableRow>
-            ))}
+            ))} 
           </TableHeader>
           <TableBody>
             {table.getRowModel().rows?.length ? (
-              table.getRowModel().rows.map((row) => (
+              table.getRowModel().rows.map((row, index) => (
                 <TableRow
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
+                  className={index % 2 === 0 ? "bg-[#F5EFFF]" : "bg-[#F1F0E8]"}
                 >
                   {row.getVisibleCells().map((cell) => (
                     <TableCell key={cell.id}>
@@ -118,6 +119,7 @@ export function Tables<TData, TValue>({
               </TableRow>
             )}
           </TableBody>
+
         </Table>
       </div>
       <Pagination table={table} />

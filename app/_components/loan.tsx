@@ -108,11 +108,11 @@ export const loanColumns: ColumnDef<LoanApplication>[] = [
         <div
           className={`flex w-[100px] items-center rounded-full justify-center py-2 text-lg ${
             status.value === "PENDING"
-              ? "bg-[#FEC400] text-white"
+            ? "bg-[#f2975a] text-white"
               : status.value === "VERIFIED"
-              ? "bg-[#29CC97] text-white"
+              ? "bg-[#A594F9] text-white"
               : status.value === "APPROVED"
-              ? "bg-[#1829C7] text-white"
+                ? "bg-[#287931] text-white"
               : "bg-[#CC2929] text-white"
           }`}
         >
