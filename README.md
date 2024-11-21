@@ -1,6 +1,6 @@
 # CreditSea Loan Manager  
 
-CreditSea Loan Manager is a powerful loan management system designed to streamline loan handling processes. Built with **TypeScript** and **Node.js**, this application combines a modern UI with robust backend support to deliver an intuitive and efficient solution.  
+CreditSea Loan Manager is a streamlined loan management system built with TypeScript and Node.js. It features a modern UI and robust backend, offering an intuitive and efficient solution for managing loans. 
 
 ## Overview  
 
