@@ -42,12 +42,17 @@ Ensure you have the following installed:
 3.  **Set up environment variables**
    -Create a .env file in the root directory and configure the following variables:
    DATABASE_URL=<your-mongodb-url>  # Replace with your MongoDB connection string  
+# Example for testing purposes:
+DATABASE_URL="mongodb+srv://global:monkpassword@cluster0.moc4i7i.mongodb.net/db"
    NEXTAUTH_URL=http://localhost:3000  
    NEXTAUTH_SECRET=secret
-
+   
 4.**Start the development server**
-    ```bash
+   ```bash
     npm run dev
+   ```
+     
+
 
 5.**Access the application**
    Open your browser and navigate to http://localhost:3000
