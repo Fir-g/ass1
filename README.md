@@ -44,12 +44,32 @@ Ensure you have the following installed:
    DATABASE_URL=<your-mongodb-url>  # Replace with your MongoDB connection string  
    NEXTAUTH_URL=http://localhost:3000  
    NEXTAUTH_SECRET=secret
+
 4.**Start the development server**
     ```bash
     npm run dev
 
 5.**Access the application**
    Open your browser and navigate to http://localhost:3000
+
+# Admin Access Instructions
+
+To access the application with admin privileges, use the following credentials:
+
+## Verifier Account
+- **Name:** Firoj Verifier  
+- **Email:** `verify@gmail.com`  
+- **Password:** `password`
+
+## Admin Account
+- **Name:** Firoj Admin  
+- **Email:** `admin@gmail.com`  
+- **Password:** `password`
+
+---
+
+### Default User Role
+- When a new account is created and logged in, the user will automatically be assigned the **User** role by default.
 
 
 
